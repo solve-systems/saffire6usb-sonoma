@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/solve-systems/saffire6usb-sonoma/blob/main/SECURITY.md
+    about: Please report security issues privately, as described here.
+  - name: SOLVE SYSTEMS
+    url: https://solvesystems.systems
+    about: Website of the project's maintainer.
