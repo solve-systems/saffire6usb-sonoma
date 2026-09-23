@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>io.github.solve-systems.saffire6usb-loader</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/bin/kmutil</string>
+        <string>load</string>
+        <string>-p</string>
+        <string>/Library/Extensions/FocusriteUSBAudio.kext</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>StandardErrorPath</key>
+    <string>/var/log/saffire6usb-loader.log</string>
+</dict>
+</plist>
