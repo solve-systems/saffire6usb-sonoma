@@ -1,0 +1,41 @@
+name: Bug report
+description: Something does not work as described.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Mac model
+      description: "Output of: sysctl -n hw.model"
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version and build
+      description: "Output of: sw_vers"
+    validations:
+      required: true
+  - type: input
+    id: oclp
+    attributes:
+      label: OpenCore Legacy Patcher version (if used)
+  - type: textarea
+    id: loaded
+    attributes:
+      label: "Output of: kmutil showloaded | grep -i focusrite"
+      render: text
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Installer log (~/Library/Logs/Saffire6USB-Installer.log), startup log (/var/log/saffire6usb-loader.log), or the log stream output from CONTRIBUTING.md.
+      render: text
