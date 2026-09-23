@@ -1,0 +1,51 @@
+name: Compatibility report
+description: Tell us whether the patch works on your Mac (success or failure).
+title: "[Compatibility] <Mac model> — macOS <version>"
+labels: ["compatibility"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for reporting! Reports of both success and failure are equally useful.
+  - type: dropdown
+    id: result
+    attributes:
+      label: Result
+      options:
+        - Works fully (playback and recording)
+        - Works partially
+        - Does not work
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Mac model
+      description: "Output of: sysctl -n hw.model (for example iMac14,2)"
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version and build
+      description: "Output of: sw_vers"
+    validations:
+      required: true
+  - type: input
+    id: oclp
+    attributes:
+      label: OpenCore Legacy Patcher version
+      description: Leave empty if your Mac runs macOS natively.
+  - type: dropdown
+    id: method
+    attributes:
+      label: Install method
+      options:
+        - Installer app
+        - Terminal scripts
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Sample rates tested, audio quality, anything unusual.
